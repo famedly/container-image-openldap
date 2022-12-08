@@ -4,7 +4,7 @@ build:
   image: registry.gitlab.com/famedly/infra/containers/buildah
   stage: build
   variables:
-    VERSION: 2.6.3-r1
+    VERSION: 2.6.3-r6
   before_script:
     - buildah login -u "${CI_REGISTRY_USER}" -p "${CI_REGISTRY_PASSWORD}" "${CI_REGISTRY}"
   script:
