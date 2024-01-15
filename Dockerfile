@@ -1,4 +1,4 @@
-FROM docker.io/alpine
+FROM docker.io/alpine:3.18
 ARG VERSION
 RUN apk --no-cache add \
     openldap=${VERSION} \
