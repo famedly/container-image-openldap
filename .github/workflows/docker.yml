@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         version:
-          - "2.6.5-r0" 
+          - "2.6.6-r1" 
 
     uses: famedly/github-workflows/.github/workflows/docker.yml@main
     with:
