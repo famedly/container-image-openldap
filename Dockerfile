@@ -13,4 +13,4 @@ RUN apk --no-cache add \
     openldap-passwd-argon2 \
  && mkdir -p /run/openldap
 
-CMD ["/usr/sbin/slapd", "-h", "ldap://0.0.0.0:389/ ldapi://%2fvar%2frun%2fsockets%2fslapd.sock"]
+CMD ["/usr/sbin/slapd", "-d", "none", "-h", "ldap://0.0.0.0:389/ ldapi://%2fvar%2frun%2fsockets%2fslapd.sock"]
