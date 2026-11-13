@@ -13,13 +13,13 @@ jobs:
     strategy:
       matrix:
         version:
-          - "2.6.8-r0" 
+          - "2.6.15-r0"
 
     uses: famedly/github-workflows/.github/workflows/docker.yml@main
     with:
       push: ${{ github.event_name != 'pull_request' }} # Always build, don't publish on pull requests
-      registry_user: famedly-ci
-      registry: docker-oss.nexus.famedly.de
+      registry_user: ${{ vars.REGISTRY_USER }}
+      registry: registry.famedly.net/docker-oss
       image_name: openldap
       build_args: "VERSION=${{ matrix.version }}"
       tags: |
