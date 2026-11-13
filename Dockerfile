@@ -1,6 +1,7 @@
-FROM docker.io/alpine:3.22
+FROM docker.io/alpine:3.24
 ARG VERSION
-RUN apk --no-cache add \
+RUN apk --no-cache upgrade \
+ && apk --no-cache add \
     openldap=${VERSION} \
     openldap-back-mdb \
     openldap-back-sql \
